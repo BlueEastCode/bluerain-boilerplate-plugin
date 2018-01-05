@@ -9,8 +9,8 @@ module.exports={
   ],
   config: {
       //Configurations for bluerain-os will be added here
-      title: "Bluerain OS",
-    
+      title: "--libraryname--",
+
       plugins: {
         // Plugins related configurations will be added here
       },
@@ -20,5 +20,5 @@ module.exports={
         }
       }
     }
-  
+
   }

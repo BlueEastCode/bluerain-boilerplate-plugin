@@ -5,6 +5,7 @@ module.exports={
         // All bluerain apps will also be added in this array
     ],
   plugins:[
+		require('./dist/--libraryname--.es5')
   	// All bluerain plugins will be added here
   ],
   config: {

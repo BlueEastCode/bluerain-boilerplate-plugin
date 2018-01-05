@@ -1,27 +1,28 @@
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import sourceMaps from 'rollup-plugin-sourcemaps'
+import sizes from 'rollup-plugin-sizes'
 import camelCase from 'lodash.camelcase'
 
 const pkg = require('./package.json')
 
-const libraryName = '--libraryname--'
+const libraryName = 'library'
 
 export default {
-  input: `dist/compiled/${libraryName}.js`,
+  input: `compiled/src/${libraryName}.js`,
   output: [
-    { file: pkg.main, name: camelCase(libraryName), format: 'umd' },
-    { file: pkg.module, format: 'es' },
+    { file: pkg.module, name: camelCase(libraryName), format: 'umd' },
   ],
   sourcemap: true,
-  // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
+	// Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
   external:  Object.keys(pkg.dependencies || {}).concat(Object.keys(pkg.peerDependencies || {})),
   watch: {
     include: 'dist/es/**',
   },
   plugins: [
     // Allow bundling cjs modules (unlike webpack, rollup doesn't understand cjs)
-    commonjs(),
+		commonjs(),
+		sizes(),
     // Allow node_modules resolution, so you can use 'external' to control
     // which external modules to include in the bundle
     // https://github.com/rollup/rollup-plugin-node-resolve#usage

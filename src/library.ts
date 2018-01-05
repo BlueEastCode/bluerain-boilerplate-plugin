@@ -12,7 +12,7 @@ export default class DummyPlugin extends Plugin {
 	static pluginName = '---Name---';
 	static slug = '---slug---';
 
-	static initialize(config: {} = {}, ctx: BlueRainType) {
+	static initialize(config: {} = {}, ctx: any) {
 		// tslint:disable-next-line:no-console
 		console.log('Plugin initialized!');
 	}

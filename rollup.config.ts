@@ -8,7 +8,7 @@ const pkg = require('./package.json')
 const libraryName = '--libraryname--'
 
 export default {
-  input: `dist/es/${libraryName}.js`,
+  input: `dist/compiled/${libraryName}.js`,
   output: [
     { file: pkg.main, name: camelCase(libraryName), format: 'umd' },
     { file: pkg.module, format: 'es' },

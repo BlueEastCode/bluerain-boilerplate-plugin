@@ -24,8 +24,7 @@
 			}
 	},
 	"include": [
-			"src",
-			"storybook"
+			"src"
 	],
   "types": [
     "typePatches"

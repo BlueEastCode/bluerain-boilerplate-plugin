@@ -21,7 +21,7 @@
   "scripts": {
     "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc && tsc --module commonjs --outDir dist/lib && rollup -c rollup.config.ts && typedoc --out dist/docs --target es6 --theme minimal --mode file src && bundlesize",
+    "build": "tsc && rollup -c rollup.config.ts && typedoc --out dist/docs --target es6 --theme minimal --mode file src && bundlesize",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -94,6 +94,7 @@
     "mapCoverage": true
   },
   "devDependencies": {
+    "@blueeast/bluerain-cli": "git+ssh://https://github.com/BlueEastCode/bluerain-cli.git#feature/new-interface",
     "@blueeast/tslint-config-blueeast": "^0.4.0",
     "@storybook/addon-actions": "^3.3.1",
     "@storybook/addon-links": "^3.3.1",
@@ -103,7 +104,7 @@
     "@types/node": "^8.0.0",
     "@types/react-native": "^0.51.9",
     "@types/storybook__react": "^3.0.6",
-    "awesome-typescript-loader": "^3.4.1",
+		"awesome-typescript-loader": "^3.4.1",
     "bundlesize": "^0.15.2",
     "codecov": "^2.3.1",
     "colors": "^1.1.2",
@@ -137,9 +138,10 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
-    "@blueeast/bluerain-os": "^0.4.8",
+    "@blueeast/bluerain-os": "0.4.8",
     "expo": "^23.0.4",
     "react": "^16.2.0",
-    "react-native": "^0.50.3"
+    "react-native": "^0.50.3",
+    "reactxp": "^0.46.6"
   }
 }

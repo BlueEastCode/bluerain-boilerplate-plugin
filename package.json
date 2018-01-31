@@ -94,6 +94,8 @@
     "mapCoverage": true
   },
   "devDependencies": {
+    "@blueeast/bluerain-plugin-material-ui": "0.8.6",
+    "@blueeast/bluerain-plugin-react-native": "https://github.com/BlueEastCode/bluerain-plugin-react-native#feature/Breadcrumb",
     "@blueeast/bluerain-platform-reactxp": "^1.1.8",
     "@blueeast/tslint-config-blueeast": "^0.4.0",
     "@storybook/addon-actions": "^3.3.1",
@@ -138,9 +140,9 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
-    "@blueeast/bluerain-os": "^1.0.2",
-    "expo": "^25.0.0",
+    "@blueeast/bluerain-os": "1.0.2",
+    "expo": "^23.0.4",
     "react": "16.2.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz"
+    "react-native": "^0.50.3"
   }
 }

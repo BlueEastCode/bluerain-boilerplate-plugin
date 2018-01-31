@@ -10,6 +10,8 @@ module.exports = {
 	plugins:[
 		// All bluerain plugins will be added here
 		// require('./di'),
+		require('@blueeast/bluerain-plugin-material-ui').default,
+		// require('@blueeast/bluerain-plugin-react-native').default,
 	],
 	config: {
 		// Configurations for bluerain-os will be added here

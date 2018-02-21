@@ -94,12 +94,20 @@
     "mapCoverage": true
   },
   "devDependencies": {
+    "@blueeast/bluerain-cli": "^1.2.1",
     "@blueeast/bluerain-platform-reactxp": "^1.1.8",
     "@blueeast/tslint-config-blueeast": "^0.4.0",
-    "@storybook/addon-actions": "^3.3.1",
-    "@storybook/addon-links": "^3.3.1",
-    "@storybook/react": "^3.3.1",
-    "@storybook/react-native": "^3.3.1",
+    "@storybook/addon-storyshots": "^3.2.13",
+    "@storybook/addon-actions": "^3.3.12",
+    "@storybook/addon-knobs": "^3.3.13",
+    "@storybook/addon-links": "^3.3.12",
+    "@storybook/react": "^3.3.12",
+    "@storybook/react-native": "^3.3.12",
+    "@storybook/addon-graphql": "^3.2.0",
+    "@storybook/addon-info": "^3.2.9",
+    "@storybook/addons": "^3.2.13",
+    "storybook-addon-intl": "^2.1.2",
+    "storybook-addon-rtl": "^0.1.1",
     "@types/jest": "^21.1.0",
     "@types/node": "^8.0.0",
     "@types/react-native": "^0.51.9",
@@ -138,7 +146,6 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
-    "@blueeast/bluerain-os": "^1.0.2",
     "expo": "^25.0.0",
     "react": "16.2.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz"

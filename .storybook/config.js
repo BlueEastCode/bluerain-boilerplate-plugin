@@ -1,15 +1,10 @@
 import React from 'react';
-
 import { configure, addDecorator } from '@storybook/react';
-import BR, { BlueRainProvider } from '@blueeast/bluerain-os';
-
+import { BlueRainDecorator } from '../storybook/bluerain';
 
 // Add BlueRain
 const BRConfigs = require('../bluerain');
-BRConfigs.renderApp = false;
-const BluerainApp = BR.boot(BRConfigs);
-const BlueRainDecorator = (storyFn) => (<BlueRainProvider>{storyFn()}</BlueRainProvider>);
-addDecorator(BlueRainDecorator);
+addDecorator(BlueRainDecorator(BRConfigs));
 
 // automatically import all files ending in *.stories.js
 const req = require.context('../src', true, /.stories.tsx$/);

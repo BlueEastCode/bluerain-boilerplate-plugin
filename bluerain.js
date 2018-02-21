@@ -27,6 +27,12 @@ module.exports = {
 				httpLinkOptions: {
 					uri: 'https://mqtt.mevris.io/graphql'
 				}
+			},
+			router:{
+				androidBackButton: true,
+				deepLinking: true,
+				forceMemoryHistory:false,
+				historyConfigs: {}
 			}
 		},
 		theme: {

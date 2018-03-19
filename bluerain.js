@@ -15,30 +15,8 @@ module.exports = {
 		// Configurations for bluerain-os will be added here
 		title: 'Bluerain OS',
 
-		// wallpaper: {
-		// 	backgroundColor: 'red',
-		// 	source: `https://s3-us-west-2.amazonaws.com/bluerainimages/bg.jpg`,
-		// 	resizeMode: 'cover',
-		// },
-
 		plugins: {
 			// Plugins related configurations will be added here
-			apollo: {
-				httpLinkOptions: {
-					uri: 'https://mqtt.mevris.io/graphql'
-				}
-			},
-			router:{
-				androidBackButton: true,
-				deepLinking: true,
-				forceMemoryHistory:false,
-				historyConfigs: {}
-			}
-		},
-		theme: {
-			colors:{
-				primary:'#3949ab'
-			}
 		}
 	}
 };

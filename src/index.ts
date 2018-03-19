@@ -1,7 +1,7 @@
 // Import here Polyfills if needed. Recommended core-js (npm i -D core-js)
 // import "core-js/fn/array.find"
 // ...
-import { Plugin, BlueRainType } from '@blueeast/bluerain-os';
+import { Plugin, BlueRain } from '@blueeast/bluerain-os';
 
 /**
  * Add Redux state management to BlueRain Apps
@@ -12,7 +12,7 @@ export default class DummyPlugin extends Plugin {
 	static pluginName = '---Name---';
 	static slug = '---slug---';
 
-	static initialize(config: {} = {}, ctx: BlueRainType) {
+	static initialize(config: {} = {}, ctx: BlueRain) {
 		// tslint:disable-next-line:no-console
 		console.log('Plugin initialized!');
 	}

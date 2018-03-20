@@ -4,41 +4,19 @@ module.exports = {
 	platform: [
 		require('@blueeast/bluerain-platform-reactxp')
 	],
-	apps:[
+	apps: [
 		// All bluerain apps will also be added in this array
 	],
-	plugins:[
+	plugins: [
 		// All bluerain plugins will be added here
-		// require('./'),
+		require('@blueeast/bluerain-plugin-react-router'),
+		require('@blueeast/bluerain-plugin-redux'),
+		require('@blueeast/bluerain-plugin-redux-devtools'),
+		require('@blueeast/bluerain-plugin-responsive-components'),
+		require('./dist'),
 	],
 	config: {
 		// Configurations for bluerain-os will be added here
-		title: 'Bluerain OS',
-
-		// wallpaper: {
-		// 	backgroundColor: 'red',
-		// 	source: `https://s3-us-west-2.amazonaws.com/bluerainimages/bg.jpg`,
-		// 	resizeMode: 'cover',
-		// },
-
-		plugins: {
-			// Plugins related configurations will be added here
-			apollo: {
-				httpLinkOptions: {
-					uri: 'https://mqtt.mevris.io/graphql'
-				}
-			},
-			router:{
-				androidBackButton: true,
-				deepLinking: true,
-				forceMemoryHistory:false,
-				historyConfigs: {}
-			}
-		},
-		theme: {
-			colors:{
-				primary:'#3949ab'
-			}
-		}
+		title: 'BlueRain Plugin Boilerplate',
 	}
 };

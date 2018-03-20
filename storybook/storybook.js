@@ -4,11 +4,12 @@ import { AppRegistry } from 'react-native';
 import { getStorybookUI, configure, addDecorator } from '@storybook/react-native';
 import { loadStories } from './storyLoader';
 import CenterView from './CenterView';
-import { BlueRainDecorator } from '../storybook/bluerain';
+import { BlueRainDecorator } from '@blueeast/bluerain-storybook-addon';
+import BR from '@blueeast/bluerain-os'
 
 // Add BlueRain
 const BRConfigs = require('../bluerain');
-addDecorator(BlueRainDecorator(BRConfigs));
+addDecorator(BlueRainDecorator(BRConfigs, BR));
 
 // CenterView
 const CenterViewDecorator = (storyFn) => (<CenterView>{storyFn()}</CenterView>);

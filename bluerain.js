@@ -4,19 +4,19 @@ module.exports = {
 	platform: [
 		require('@blueeast/bluerain-platform-reactxp')
 	],
-	apps:[
+	apps: [
 		// All bluerain apps will also be added in this array
 	],
-	plugins:[
+	plugins: [
 		// All bluerain plugins will be added here
-		// require('./'),
+		require('@blueeast/bluerain-plugin-react-router'),
+		require('@blueeast/bluerain-plugin-redux'),
+		require('@blueeast/bluerain-plugin-redux-devtools'),
+		require('@blueeast/bluerain-plugin-responsive-components'),
+		require('./dist'),
 	],
 	config: {
 		// Configurations for bluerain-os will be added here
-		title: 'Bluerain OS',
-
-		plugins: {
-			// Plugins related configurations will be added here
-		}
+		title: 'BlueRain Plugin Boilerplate',
 	}
 };

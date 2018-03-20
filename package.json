@@ -14,6 +14,11 @@
     "type": "git",
     "url": ""
   },
+  "release": {
+    "branch": "master",
+    "dryRun": false,
+    "debug": true
+  },
   "license": "MIT",
   "engines": {
     "node": ">=6.0.0"
@@ -34,7 +39,7 @@
     "deploy-docs": "ts-node tools/gh-pages-publish",
     "report-coverage": "cat ./coverage/lcov.info | coveralls && codecov",
     "commit": "git-cz",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
     "postinstall": "ts-node tools/init",
@@ -130,7 +135,7 @@
     "cross-env": "^5.1.4",
     "cz-conventional-changelog": "^2.0.0",
     "husky": "^0.14.0",
-    "jest": "^21.0.0",
+    "jest": "^22.4.2",
     "lint-staged": "^6.0.0",
     "lodash.camelcase": "^4.3.0",
     "prettier": "^1.11.1",
@@ -142,16 +147,16 @@
     "react-native-typescript-transformer": "^1.2.3",
     "replace-in-file": "^3.2.0",
     "rimraf": "^2.6.1",
-    "semantic-release": "^8.0.0",
+    "semantic-release": "^14.0.0",
     "size-limit": "^0.17.0",
     "storybook-addon-intl": "^2.1.2",
     "storybook-addon-rtl": "^0.1.1",
-    "ts-jest": "^22.0.0",
-    "ts-node": "^4.0.1",
+    "ts-jest": "^22.4.2",
+    "ts-node": "^5.0.1",
     "tslint": "^5.9.1",
-    "typedoc": "^0.9.0",
-    "typescript": "^2.3.4",
-    "validate-commit-msg": "^2.12.2"
+    "typedoc": "^0.11.1",
+    "typescript": "^2.7.2",
+    "validate-commit-msg": "^2.14.0"
   },
   "dependencies": {
     "expo": "^25.0.0",

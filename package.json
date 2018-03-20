@@ -7,7 +7,7 @@
   "typings": "types/index.d.ts",
   "files": [
     "dist",
-		"types"
+    "types"
   ],
   "author": "BlueEast Team <code@blueeast.com>",
   "repository": {
@@ -94,14 +94,14 @@
   },
   "size-limit": [
     {
-      "limit": "2.5 KB",
+      "limit": "1 KB",
       "webpack": false,
       "path": "dist/*.js"
     }
   ],
   "devDependencies": {
     "@blueeast/bluerain-cli": "^1.2.1",
-    "@blueeast/bluerain-os": "^3.6.0",
+    "@blueeast/bluerain-os": "^3.9.2",
     "@blueeast/bluerain-platform-reactxp": "^3.0.3",
     "@blueeast/bluerain-plugin-react-router": "^1.1.1",
     "@blueeast/bluerain-plugin-redux": "^0.6.4",
@@ -156,9 +156,9 @@
   "dependencies": {
     "expo": "^25.0.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz"
-	},
-	"peerDependencies": {
-		"@blueeast/bluerain-os": "*",
-		"react": "*"
-	}
+  },
+  "peerDependencies": {
+    "@blueeast/bluerain-os": "*",
+    "react": "*"
+  }
 }

@@ -23,7 +23,7 @@
 		"noImplicitThis": false,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
-		"declarationDir": "dist/types",
+		"declarationDir": "types",
 		"outDir": "compiled",
 		"jsx": "react", // process JSX
 		"typeRoots": [

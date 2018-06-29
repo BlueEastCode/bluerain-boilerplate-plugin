@@ -1,0 +1,167 @@
+{
+  "name": "bluerain-boilerplate-plugin",
+  "version": "0.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "dist/index.js",
+  "typings": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "author": "BlueEast Team <code@blueeast.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "release": {
+    "branch": "master",
+    "dryRun": false,
+    "debug": true
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "lint": "tslint -t codeFrame 'src/**/*.ts' 'test/**/*.ts'",
+    "prebuild": "rimraf dist",
+    "build": "tsc && bluerain build plugin",
+    "postbuild": "rimraf compiled && yarn run size",
+    "build:prod:exclude": "ts-node tools/production-package-exclude",
+    "size": "size-limit",
+    "watch": "tsc -w",
+    "start": "bluerain run web",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
+    "generate-docs": "typedoc --out dist/docs --target es6 --theme minimal --mode file src",
+    "deploy-docs": "ts-node tools/gh-pages-publish",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls && codecov",
+    "commit": "git-cz",
+    "semantic-release": "semantic-release",
+    "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 6006",
+    "storybook-native": "storybook start -p 7007",
+    "prestorybook-native": "rnstl",
+    "build-storybook": "build-storybook",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write --use-tabs --single-quote",
+      "git add"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    },
+    "validate-commit-msg": {
+      "types": "conventional-commit-types",
+      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
+    },
+    "react-native-storybook-loader": {
+      "searchDir": [
+        "./src"
+      ],
+      "pattern": "**/*.stories.tsx",
+      "outputFile": "./storybook/storyLoader.js"
+    }
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/test/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 95,
+        "lines": 95,
+        "statements": 95
+      }
+    },
+    "collectCoverage": true,
+    "mapCoverage": true
+  },
+  "size-limit": [
+    {
+      "limit": "1 KB",
+      "webpack": false,
+      "path": "dist/*.js"
+    }
+  ],
+  "devDependencies": {
+    "@blueeast/bluerain-cli": "^1.2.1",
+    "@blueeast/bluerain-platform-react-native-web": "^1.1.1",
+    "@blueeast/bluerain-plugin-react-router": "^1.1.5",
+    "@blueeast/bluerain-plugin-redux": "^0.6.6",
+    "@blueeast/bluerain-plugin-redux-devtools": "^0.6.0",
+    "@blueeast/bluerain-plugin-responsive-components": "^1.2.5",
+    "@blueeast/bluerain-storybook-addon": "^1.1.0",
+    "@blueeast/tslint-config-blueeast": "^0.5.6",
+    "@storybook/addon-actions": "^3.3.12",
+    "@storybook/addon-graphql": "^3.2.0",
+    "@storybook/addon-info": "^3.2.9",
+    "@storybook/addon-knobs": "^3.3.13",
+    "@storybook/addon-links": "^3.3.12",
+    "@storybook/addon-storyshots": "^3.2.13",
+    "@storybook/addons": "^3.2.13",
+    "@storybook/react": "^3.3.12",
+    "@storybook/react-native": "^3.3.12",
+    "@types/jest": "^22.2.0",
+    "@types/node": "^9.4.7",
+    "@types/react-native": "^0.52.18",
+    "@types/storybook__react": "^3.0.7",
+    "awesome-typescript-loader": "^4.0.1",
+    "codecov": "^3.0.0",
+    "colors": "^1.2.1",
+    "commitizen": "^2.9.6",
+    "coveralls": "^3.0.0",
+    "cross-env": "^5.1.4",
+    "cz-conventional-changelog": "^2.0.0",
+    "husky": "^0.14.0",
+    "jest": "^22.4.2",
+    "lint-staged": "^6.0.0",
+    "lodash.camelcase": "^4.3.0",
+    "prettier": "^1.11.1",
+    "prompt": "^1.0.0",
+    "react": "16.2.0",
+    "react-dom": "^16.2.0",
+    "react-native-scripts": "1.11.1",
+    "react-native-storybook-loader": "^1.8.0",
+    "react-native-typescript-transformer": "^1.2.3",
+    "replace-in-file": "^3.2.0",
+    "rimraf": "^2.6.1",
+    "semantic-release": "^14.0.0",
+    "size-limit": "^0.17.0",
+    "storybook-addon-intl": "^2.1.2",
+    "storybook-addon-rtl": "^0.1.1",
+    "ts-jest": "^22.4.2",
+    "ts-node": "^5.0.1",
+    "tslint": "^5.9.1",
+    "typedoc": "^0.11.1",
+    "typescript": "^2.7.2",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "dependencies": {
+    "expo": "^25.0.0",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-25.0.0.tar.gz"
+  },
+  "peerDependencies": {
+    "@blueeast/bluerain-os": "*",
+    "react": "*"
+  }
+}

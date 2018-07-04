@@ -1,0 +1,45 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function () {
+  var enterModule = require('react-hot-loader').enterModule;
+
+  enterModule && enterModule(module);
+})(); /* eslint-disable global-require */
+/* eslint-disable import/no-extraneous-dependencies */
+
+// We create this wrapper so that we only import react-hot-loader for a
+// development build.  Small savings. :)
+var ReactHotLoader = process.env.NODE_ENV === 'development' ? require('react-hot-loader').AppContainer : function (_ref) {
+  var children = _ref.children;
+  return _react2.default.Children.only(children);
+};
+
+var _default = ReactHotLoader;
+exports.default = _default;
+;
+
+(function () {
+  var reactHotLoader = require('react-hot-loader').default;
+
+  var leaveModule = require('react-hot-loader').leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(ReactHotLoader, 'ReactHotLoader', '/home/nasir/blueeast/bluerain-cli/packages/web/src/client/components/ReactHotLoader.js');
+  reactHotLoader.register(_default, 'default', '/home/nasir/blueeast/bluerain-cli/packages/web/src/client/components/ReactHotLoader.js');
+  leaveModule(module);
+})();
+
+;

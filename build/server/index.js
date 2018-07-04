@@ -59,7 +59,7 @@ module.exports =
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "http://0.0.0.0:7331/src/client/";
+/******/ 	__webpack_require__.p = "http://0.0.0.0:8331/src/client/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 19);
@@ -773,7 +773,7 @@ const configFactory = configs => (0, _customConfigs2.default)({
   port: EnvVars.number('PORT', 1337),
 
   // The port on which the client bundle development server should run.
-  clientDevServerPort: EnvVars.number('CLIENT_DEV_PORT', 7331),
+  clientDevServerPort: EnvVars.number('CLIENT_DEV_PORT', 8331),
 
   // This is an example environment variable which is used within the react
   // application to demonstrate the usage of environment variables across

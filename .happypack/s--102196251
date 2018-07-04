@@ -1,0 +1,93 @@
+'use strict';
+
+var _jsxFileName = '/home/nasir/blueeast/bluerain-cli/packages/web/src/client/index.js';
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _ReactHotLoader = require('./components/ReactHotLoader');
+
+var _ReactHotLoader2 = _interopRequireDefault(_ReactHotLoader);
+
+var _MainApp = require('../shared/components/MainApp');
+
+var _MainApp2 = _interopRequireDefault(_MainApp);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(function () {
+  var enterModule = require('react-hot-loader').enterModule;
+
+  enterModule && enterModule(module);
+})();
+
+require('react-hot-loader/patch');
+// import './polyfills';
+
+// Get the DOM Element that will host our React application.
+var container = document.querySelector('#app');
+
+/**
+ * Renders the given React Application component.
+ */
+function renderApp(TheApp) {
+  // Firstly, define our full application component, wrapping the given
+  // component app with a browser based version of react router.
+  var app = _react2.default.createElement(
+    _ReactHotLoader2.default,
+    {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      }
+    },
+    _react2.default.createElement(TheApp, {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      }
+    })
+  );
+
+  (0, _reactDom.render)(app, container);
+}
+
+// Execute the first render of our app.
+renderApp(_MainApp2.default);
+
+// This registers our service worker for asset caching and offline support.
+// Keep this as the last item, just in case the code execution failed (thanks
+// to react-boilerplate for that tip.)
+require('./registerServiceWorker');
+
+// The following is needed so that we can support hot reloading our application.
+if (process.env.BUILD_FLAG_IS_DEV === 'true' && module.hot) {
+  // Accept changes to this file for hot reloading.
+  module.hot.accept('./index.js');
+  // Any changes to our App will cause a hotload re-render.
+  module.hot.accept('../shared/components/MainApp/index.js', function () {
+    renderApp(require('../shared/components/MainApp').default);
+  });
+}
+;
+
+(function () {
+  var reactHotLoader = require('react-hot-loader').default;
+
+  var leaveModule = require('react-hot-loader').leaveModule;
+
+  if (!reactHotLoader) {
+    return;
+  }
+
+  reactHotLoader.register(container, 'container', '/home/nasir/blueeast/bluerain-cli/packages/web/src/client/index.js');
+  reactHotLoader.register(renderApp, 'renderApp', '/home/nasir/blueeast/bluerain-cli/packages/web/src/client/index.js');
+  leaveModule(module);
+})();
+
+;

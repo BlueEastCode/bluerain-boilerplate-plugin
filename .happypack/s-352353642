@@ -1,0 +1,150 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _jsx = function () { var REACT_ELEMENT_TYPE = typeof Symbol === "function" && Symbol.for && Symbol.for("react.element") || 0xeac7; return function createRawReactElement(type, props, key, children) { var defaultProps = type && type.defaultProps; var childrenLength = arguments.length - 3; if (!props && childrenLength !== 0) { props = {}; } if (props && defaultProps) { for (var propName in defaultProps) { if (props[propName] === void 0) { props[propName] = defaultProps[propName]; } } } else if (!props) { props = defaultProps || {}; } if (childrenLength === 1) { props.children = children; } else if (childrenLength > 1) { var childArray = Array(childrenLength); for (var i = 0; i < childrenLength; i++) { childArray[i] = arguments[i + 3]; } props.children = childArray; } return { $$typeof: REACT_ELEMENT_TYPE, type: type, key: key === undefined ? null : '' + key, ref: null, props: props, _owner: null }; }; }();
+
+require('normalize.css/normalize.css');
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactHelmet = require('react-helmet');
+
+var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
+
+var _app = require('../BlueRain/app');
+
+var _app2 = _interopRequireDefault(_app);
+
+require('./globals.css');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// import Error404 from './Error404';
+// import Header from './Header';
+
+// import AsyncHomeRoute from './AsyncHomeRoute';
+// import AsyncCounterRoute from './AsyncCounterRoute';
+// import AsyncAboutRoute from './AsyncAboutRoute';
+
+function MainApp() {
+  return _jsx('div', {
+    className: 'app-root'
+  }, void 0, _jsx(_reactHelmet2.default, {}, void 0, _jsx('html', {
+    lang: 'en'
+  }), _jsx('meta', {
+    charSet: 'utf-8'
+  }), _jsx('meta', {
+    name: 'application-name',
+    content: 'BlueRain'
+  }), _jsx('meta', {
+    name: 'description',
+    content: 'BlueRain'
+  }), _jsx('meta', {
+    httpEquiv: 'X-UA-Compatible',
+    content: 'IE=edge'
+  }), _jsx('meta', {
+    name: 'viewport',
+    content: 'width=device-width, initial-scale=1'
+  }), _jsx('meta', {
+    name: 'msapplication-TileColor',
+    content: '#2b2b2b'
+  }), _jsx('meta', {
+    name: 'msapplication-TileImage',
+    content: '/favicons/mstile-144x144.png'
+  }), _jsx('meta', {
+    name: 'theme-color',
+    content: '#2b2b2b'
+  }), _jsx('title', {}, void 0, 'BlueRain'), _jsx('link', {
+    rel: 'apple-touch-icon-precomposed',
+    sizes: '152x152',
+    href: '/favicons/apple-touch-icon-152x152.png'
+  }), _jsx('link', {
+    rel: 'apple-touch-icon-precomposed',
+    sizes: '144x144',
+    href: '/favicons/apple-touch-icon-144x144.png'
+  }), _jsx('link', {
+    rel: 'apple-touch-icon-precomposed',
+    sizes: '120x120',
+    href: '/favicons/apple-touch-icon-120x120.png'
+  }), _jsx('link', {
+    rel: 'apple-touch-icon-precomposed',
+    sizes: '114x114',
+    href: '/favicons/apple-touch-icon-114x114.png'
+  }), _jsx('link', {
+    rel: 'apple-touch-icon-precomposed',
+    sizes: '76x76',
+    href: '/favicons/apple-touch-icon-76x76.png'
+  }), _jsx('link', {
+    rel: 'apple-touch-icon-precomposed',
+    sizes: '72x72',
+    href: '/favicons/apple-touch-icon-72x72.png'
+  }), _jsx('link', {
+    rel: 'apple-touch-icon-precomposed',
+    sizes: '57x57',
+    href: '/favicons/apple-touch-icon-57x57.png'
+  }), _jsx('link', {
+    rel: 'apple-touch-icon-precomposed',
+    sizes: '60x60',
+    href: '/favicons/apple-touch-icon-60x60.png'
+  }), _jsx('link', {
+    rel: 'apple-touch-icon',
+    sizes: '180x180',
+    href: '/favicons/apple-touch-icon-180x180.png'
+  }), _jsx('link', {
+    rel: 'mask-icon',
+    href: '/favicons/safari-pinned-tab.svg',
+    color: '#00a9d9'
+  }), _jsx('link', {
+    rel: 'icon',
+    type: 'image/png',
+    href: '/favicons/favicon-196x196.png',
+    sizes: '196x196'
+  }), _jsx('link', {
+    rel: 'icon',
+    type: 'image/png',
+    href: '/favicons/favicon-128.png',
+    sizes: '128x128'
+  }), _jsx('link', {
+    rel: 'icon',
+    type: 'image/png',
+    href: '/favicons/favicon-96x96.png',
+    sizes: '96x96'
+  }), _jsx('link', {
+    rel: 'icon',
+    type: 'image/png',
+    href: '/favicons/favicon-32x32.png',
+    sizes: '32x32'
+  }), _jsx('link', {
+    rel: 'icon',
+    sizes: '16x16 32x32',
+    href: '/favicon.ico'
+  }), _jsx('meta', {
+    name: 'msapplication-TileColor',
+    content: '#2b2b2b'
+  }), _jsx('meta', {
+    name: 'msapplication-TileImage',
+    content: '/favicons/mstile-144x144.png'
+  }), _jsx('meta', {
+    name: 'msapplication-square70x70logo',
+    content: '/favicons/mstile-70x70.png'
+  }), _jsx('meta', {
+    name: 'msapplication-square150x150logo',
+    content: '/favicons/mstile-150x150.png'
+  }), _jsx('meta', {
+    name: 'msapplication-wide310x150logo',
+    content: '/favicons/mstile-310x150.png'
+  }), _jsx('meta', {
+    name: 'msapplication-square310x310logo',
+    content: '/favicons/mstile-310x310.png'
+  }), _jsx('link', {
+    rel: 'manifest',
+    href: '/manifest.json'
+  })), _jsx(_app2.default, {}));
+}
+
+exports.default = MainApp;

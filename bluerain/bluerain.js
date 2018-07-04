@@ -5,15 +5,16 @@
 // 		require('@blueeast/bluerain-platform-react-native-web')
 // 	],
 // 	apps: [
-// 		// All bluerain apps will also be added in this array
+//         // All bluerain apps will also be added in this array
 // 	],
 // 	plugins: [
 // 		// All bluerain plugins will be added here
 // 		require('@blueeast/bluerain-plugin-react-router'),
 // 		require('@blueeast/bluerain-plugin-redux'),
 // 		require('@blueeast/bluerain-plugin-redux-devtools'),
-// 		require('@blueeast/bluerain-plugin-responsive-components'),
-// 		require('./dist'),
+//         require('@blueeast/bluerain-plugin-responsive-components'),
+//         // require('../dist/index.ts')
+// 		// require('./dist')
 // 	],
 // 	config: {
 // 		// Configurations for bluerain-os will be added here
@@ -25,9 +26,11 @@
 //     return "Hello, " + person;
 // }
 
-const greetings = user => console.log(`Hello ${user}!`);
+const greetings = (user) => `Hello ${user}! 😀 😎 👍 💯`;
 
 let user = "Blueeast";
-console.log('user', typeof greetings);
+console.log(greetings(user));
 
 document.body.innerHTML = greetings(user);
+
+

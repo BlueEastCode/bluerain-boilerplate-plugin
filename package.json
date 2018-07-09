@@ -107,6 +107,7 @@
   "devDependencies": {
     "@blueeast/bluerain-cli": "^1.2.1",
     "@blueeast/bluerain-os": "^3.9.2",
+    "@blueeast/bluerain-ui-interfaces": "^3.2.11",
     "@blueeast/bluerain-platform-reactxp": "^3.0.3",
     "@blueeast/bluerain-plugin-react-router": "^1.1.1",
     "@blueeast/bluerain-plugin-redux": "^0.6.4",
@@ -116,6 +117,7 @@
     "@blueeast/tslint-config-blueeast": "^0.5.6",
     "@storybook/addon-actions": "^3.3.12",
     "storybook-chrome-screenshot": "^1.1.0",
+    "storybook-addon-specifications": "^2.1.2",
     "react-test-renderer": "^16.4.1",
     "@storybook/addon-graphql": "^3.2.0",
     "@storybook/addon-info": "^3.2.9",

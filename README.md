@@ -8,7 +8,7 @@
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://paypal.me/AJoverMorales)
 
 A starter project that makes creating a TypeScript library extremely easy.
-
+[https://blueeast.gitbook.io/bluerain-boilerplate-plugin](https://blueeast.gitbook.io/bluerain-boilerplate-plugin)
 ![](https://i.imgur.com/opUmHp0.png)
 
 ### Usage
